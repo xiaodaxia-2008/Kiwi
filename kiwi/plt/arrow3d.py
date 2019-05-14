@@ -3,6 +3,18 @@ from scipy.spatial.transform import Rotation
 
 
 def arrow(ax, Ts, length=4, display="xyzo", **kargs):
+    """Draw an arrow in 3d space
+
+    Arguments:
+        ax {matplotlib axes} -- fig = plt.figure(), ax = fig.add_subplot(projection='3d')
+        Ts {transform} -- a transform (4x4) or an array of transforms (Nx4x4)
+
+    Keyword Arguments:
+        length {int} -- the length of the arrow (default: {4})
+        display {str} -- draw which part of the arrow (default: {"xyzo"})
+        **kargs:
+        origin_color: "red", etc, the color of the origin point
+    """
     draw_code = ["ax.quiver(*T[:3, 3],*T[:3, 0], length=length, normalize=True, color=(1, 0, 0, 0.5))",
                  "ax.quiver(*T[:3, 3], *T[:3, 1], length=length, normalize=True, color=(0, 1, 0, 0.5))",
                  "ax.quiver(*T[:3, 3], *T[:3, 2], length=length, normalize=True, color=(0, 0, 1, 0.5))",
@@ -31,8 +43,8 @@ def trans(axis, dis):
     AXIS = ('X', 'Y', 'Z')
     axis = str(axis).upper()
     if axis not in AXIS:
-        print(f"{axis} is unknown axis, should be one of {AXIS}")
-        return
+        print("%s is unknown axis, should be one of %s" % (axis, AXIS))
+        return np.eye(4)
     trans_mat = np.eye(4)
     trans_mat[AXIS.index(axis), 3] = dis
     return trans_mat
@@ -43,7 +55,7 @@ if __name__ == "__main__":
     from mpl_toolkits.mplot3d import Axes3D
     import matplotlib.pyplot as plt
     T1 = trans("x", 3).dot(trans("y", 3)).dot(
-        trans("z", 4)).dot(rotate("x", np.pi/3))
+        trans("z", 4))
     T2 = T1.dot(trans("x", -2))
     Ts = np.array([T1, T2])
     fig = plt.figure(figsize=(4, 3))
