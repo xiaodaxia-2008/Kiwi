@@ -140,7 +140,7 @@ class Device:
 
 
 if __name__ == '__main__':
-    phone_no = ["18629689923", "15191862322"]
+    phone_no = ["186xxxxxx23", "151xxxxxxx2"]
     D = Device(wireless=True)
     D.screen_on()
     # D.call_number(phone_no, times=52, hands_free=True)
