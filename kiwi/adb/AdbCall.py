@@ -41,7 +41,9 @@ class Device:
         if wireless:
             if info.get("ip", ''):
                 self.sn = '%s:5555' % info['ip']
-                self.adb_command("adb tcpip 5555")  # start wireless mode
+                # start wireless mode
+                print(self.adb_command("adb tcpip 5555"))
+                time.sleep(2)
                 self.adb_command("adb connect %s" % info['ip'])
                 if self.sn in self.get_device_identifier():
                     print(
@@ -140,10 +142,10 @@ class Device:
 
 
 if __name__ == '__main__':
-    phone_no = ["186xxxxxx23", "151xxxxxxx2"]
+    phone_no = ["18629689923"]
     D = Device(wireless=True)
     D.screen_on()
-    # D.call_number(phone_no, times=52, hands_free=True)
+    D.call_number(phone_no, times=200, hands_free=True)
     # D.swipe_up(wait=1)
     # D.input("123456789", wait=2)  # 开屏密码
     # # D.call_number(phone_no, times=52, hands_free=True)
