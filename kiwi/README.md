@@ -1,1 +1,0 @@
-Funny and useful codes.
