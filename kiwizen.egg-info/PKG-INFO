@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: kiwizen
-Version: 0.0.1
+Version: 0.0.2
 Summary: Funny and useful codes
 Home-page: https://github.com/xiaodaxia-2008/Kiwi
 Author: Zen Shawn
@@ -8,7 +8,18 @@ Author-email: xiaozisheng2008@qq.com
 Maintainer: Zen Shawn
 Maintainer-email: xiaozisheng2008@qq.com
 License: BSD License
-Description: Funny and useful codes.
+Description: # kiwizen 
+        ### Funny and useful codes.
+        ---
+        ## alg
+        1. kiwizen.alg.IntersectionOfSpaceLines  
+        Calculate the intersection point of 2 n-dimension lines    
+        ---
+            The algorithm to calculate 2 n-dimension lines is shown below:  
+        ![How to calculate the insection point ?](https://github.com/xiaodaxia-2008/Kiwi/blob/master/resources/imgs/InsectionOf2SpaceLines.jpg){:height="100" width="100"}
+        ## plt
+        2. kiwizen.plt.arrow3d  
+        Draw an arrow in matplot.pyplot
 Platform: all
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

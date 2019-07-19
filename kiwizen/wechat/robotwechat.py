@@ -22,17 +22,15 @@ else:
 bot = wxpy.Bot(cache_path=True)
 bot.enable_puid('wxpy_puid.pkl')
 
-auto_reply_persons_1 = ['小墨', '狗秦', '周彪', 'We are 伐木累',
-                        '贺宇', '虾米']
+auto_reply_persons_1 = ['xx', 'xx']
 auto_friends_1 = []
 for person in auto_reply_persons_1:
     auto_friends_1.append(wxpy.ensure_one(bot.chats().search(person)))
 
-xiaomo = wxpy.ensure_one(bot.chats().search('小墨'))
-sansan = wxpy.ensure_one(bot.chats().search('虾米'))
+xiaomo = wxpy.ensure_one(bot.chats().search('xx'))
+sansan = wxpy.ensure_one(bot.chats().search(''))
 
-tuling = wxpy.Tuling(api_key='df38ce0818f543a6a09c51633968e024')
-# xiaoi = wxpy.XiaoI('slPfHmv9sqsi', 'AP5Ai5XkXcniJA8arWQo')
+tuling = wxpy.Tuling(api_key='xxxxxxxxxxxxxxxxxx')
 # global auto_friends
 auto_friends = auto_friends_1
 

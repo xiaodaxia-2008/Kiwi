@@ -63,5 +63,5 @@ def ConvertPhotoBgColor(path, source_color="red", target_color="white"):
 
 
 if __name__ == "__main__":
-    path = "./test/lixia.jpg"
+    path = "./test/xxxx.jpg"
     ConvertPhotoBgColor(path, source_color="red", target_color="white")
