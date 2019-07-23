@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='kiwizen',
-    version='0.0.2',
+    version='0.0.3',
     description= 'Funny and useful codes',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -16,7 +16,7 @@ setup(
     maintainer_email='xiaozisheng2008@qq.com',
     license='BSD License',
     #packages=find_packages(),
-    packages=['kiwizen.plt', 'kiwizen.alg'],
+    packages=['kiwizen.plt', 'kiwizen.alg', 'kiwizen.'],
     platforms=["all"],
     url='https://github.com/xiaodaxia-2008/Kiwi',
     classifiers=[
