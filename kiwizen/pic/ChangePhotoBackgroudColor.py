@@ -4,6 +4,7 @@ by xiaozhen
 """
 import cv2
 import os
+import numpy as np
 
 
 def ConvertPhotoBgColor(path, source_color="red", target_color="white"):
